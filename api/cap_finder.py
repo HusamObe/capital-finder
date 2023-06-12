@@ -34,7 +34,7 @@ def get_capital_by_country(country):
     res = conn.getresponse()
     data = res.read().decode("utf-8")
     country_data = json.loads(data)[0]
-    capital = country_data["capital"]
+    capital = country_data["capital"][0]
     return capital
 
 
